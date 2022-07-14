@@ -3,14 +3,6 @@
 
 # 環境 (Environment)
 
-## Python
-- `Python 3.8.8`
-
-## Django
-- `Version: 4.0.5`
-
-## PostgreSQL
-
 ## VScode
 
 ### 環境構築
@@ -22,6 +14,14 @@
 - Git Graph (gitのバージョンの可視化)
 - indent-rainbow (インデントが見やすくなる)
 - Trailing Spaces (無駄な空白を可視化)
+
+
+## バージョン
+- `Python 3.8.8`
+- `django==4.0.5`
+- `psql (PostgreSQL) 14.4`
+
+
 
 # 注意点 (Attention)
 - pushする前にpullを
