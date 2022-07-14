@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'associating_game.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  # デフォのデータベースをPostgreSQL
+        'NAME': 'associating_game',
+        'USER': os.environ.get('DB_USER'),  # データベースのユーザーを.envから取得
+        'PASSWORD': os.environ.get('DB_PASSWORD'),  # データベースのパスワードを.envから取得
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -104,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'  # 日本語に
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'UTC'  # 日本時間に
 
 USE_I18N = True
 
